@@ -191,6 +191,91 @@ a {
   height: 100%;
 }
 
+/* la palette du gout */
+.menus {
+  display: flex;
+  flex-direction: column;
+  background: #F8F8F8;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 42px 42px 0 0;
+  margin-top: -15%;
+}
+
+.tittle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.tittle--name {
+  font-weight: 500;
+}
+.tittle--heart {
+  padding-right: 20px;
+  font-size: 24px;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.menu {
+  height: 50px;
+  border-bottom: 3px solid #99E2D0;
+  width: 35px;
+}
+.menu--name {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.receipts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 1PX 3PX 10PX 3PX lightgray;
+}
+.receipts--name {
+  margin: 11px 0 4px 11px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.receipts--ingredient {
+  margin: 4px 0 11px 11px;
+  font-size: 15px;
+}
+.receipts--price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-right: 20px;
+  padding-bottom: 11px;
+  font-weight: 500;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.button--buy {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: 1px solid #9356DC;
+  border-radius: 30px;
+  background: linear-gradient(to bottom right, #d056f5, #9356DC);
+  box-shadow: 1PX 3PX 10PX 3PX lightgray;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 ul {
   list-style-type: none;
   padding-left: 5%;
@@ -211,6 +296,24 @@ footer img {
 
 footer {
   background: #484a4a;
+}
+
+.nav1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nav1--arrow {
+  padding-right: 300px;
+  position: absolute;
+  font-size: 20px;
+}
+
+.backimg {
+  object-fit: cover;
+  width: 100%;
+  height: 340px;
 }
 
 /*# sourceMappingURL=_index.css.map */
