@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+body{
+   font-family: "Roboto", sans-serif; 
+   display: flex;
+   flex-direction: column;
+   margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}

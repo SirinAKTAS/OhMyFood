@@ -1,0 +1,109 @@
+@use "../Utils/variables" as variables;
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+        &--logo{
+            height: 30PX;
+            width: 50%;
+            margin-bottom: 16px;
+            margin-top: 12px;
+        }
+}
+.intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+        &--search{
+            background: #E8E8E8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            height: 50px;
+            width: 100%;
+                &--name{
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+        }
+}
+
+.book{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 60px;
+    background: #F8F8F8;
+        &--name{
+            margin: 30px 0 6px 0;
+            text-align: center; 
+            font-size: 26px; 
+            width: 80%;
+        }
+            &--description{
+                text-align: center;
+                margin: 0 0 30PX 0;
+                font-size: 18px;
+            }
+}
+
+.btn{
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid variables.$colour-primary;
+    border-radius: 30px;
+    background: linear-gradient(to bottom right,#d056f5, variables.$colour-primary );
+    box-shadow: 1PX 3PX 10PX 3PX lightgray;
+}
+
+
+
+
+.function{
+    display: flex;
+    flex-direction: column; 
+    padding: 30px 16px 50px 16px;
+}
+.steps{
+    display: flex;
+    flex-direction: column;
+     &--article{
+         margin: 12px;
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: flex-start;
+         gap: 20px;
+         border-radius: 20px;
+         background: #F8F8F8;
+         padding-top: 5px;
+         padding-bottom: 5px;
+            &--name{
+                font-size: 18px;
+                font-weight: 500;
+            }
+     }
+        &--number{
+            background: variables.$colour-primary;
+            position: relative;
+            border-radius: 50%;
+            padding: 4px 8px; 
+            font-size: 12px;
+            margin-left: -11px;
+        }
+}
+.white {
+    color: white;
+}
+.darkgray {
+    color: #808080;
+}
+.size{
+    font-size: 18px;
+}
