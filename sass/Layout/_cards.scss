@@ -1,5 +1,16 @@
 @use "../Utils/variables" as variables;
 
+.vignets{
+    animation: fadein 4s;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
 .restaurants{
     display: flex;
     flex-direction: column;
@@ -19,7 +30,7 @@
     flex-wrap: wrap;
     background: white;
     width: 100%;
-    height: 240px;
+    height: 245px;
     border-radius: 16px;
     box-shadow: 1PX 1PX 10PX 3PX lightgray;
         &--img{
@@ -47,22 +58,25 @@
     margin: 0;
         &--name{
             margin: 10px 0 4px 10px;
+            font-size: 18px;
                 &--info{
-                    margin: 0 0 6px 10px;
-                    font-size: 14px;
+                    margin: 0 0 8px 10px;
+                    font-size: 16px;
                 }
         }
 }
 .heart{
-    padding-right: 40px;
+    padding-right: 30px;
+    font-size: 24px;
 }
+
 .restaurants a{
     width: 100%;
     height: 100%;
 }
 
 
-/* la palette du gout */
+/* menu */
 
 .menus{
     display: flex;
@@ -81,6 +95,8 @@
     justify-content: space-between;
         &--name{
             font-weight: 500;
+            font-family: 'Shrikhand', sans-serif;
+            font-size: 28px;
         }
         &--heart{
             padding-right: 20px;
@@ -135,6 +151,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
+    margin-top: 20px;
         &--buy{
                 color: white;
                 padding: 16px;
