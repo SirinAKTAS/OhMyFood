@@ -1,8 +1,5 @@
 @use "../Utils/variables" as variables;
 
-.vignets{
-    animation: fadein 4s;
-}
 @keyframes fadein {
     from {
         opacity:0;
@@ -10,6 +7,35 @@
     to {
         opacity:1;
     }
+}
+
+@keyframes transition {
+    from {
+        transform: translateY(10px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes heart {
+    0%   {
+        font-weight: 800;
+        background: -webkit-linear-gradient(variables.$colour-primary,variables.$colour-secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;   
+        opacity: 0.1;
+    }   
+    100% {
+        font-weight: 800;
+        background: -webkit-linear-gradient(variables.$colour-primary,variables.$colour-secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    } 
+}
+
+.vignets{
+    animation: fadein 2s;
 }
 .restaurants{
     display: flex;
@@ -66,8 +92,19 @@
         }
 }
 .heart{
-    padding-right: 30px;
-    font-size: 24px;
+    padding-right: 20px;
+    font-size: 32px;
+    font-weight: 100;
+        &--absolute{
+            position: absolute;
+            right: 36px;
+            font-size: 32px;
+            font-weight: 100;
+                &:hover{
+                    animation: heart 1500ms ease forwards;
+                    cursor: pointer;
+                }  
+        }
 }
 
 .restaurants a{
@@ -98,10 +135,6 @@
             font-family: 'Shrikhand', sans-serif;
             font-size: 28px;
         }
-        &--heart{
-            padding-right: 20px;
-            font-size: 24px;
-        }
 }
 
 .articles{
@@ -128,25 +161,63 @@
     background: white;
     border-radius: 16px;
     box-shadow: 1PX 3PX 10PX 3PX lightgray;
+    animation: transition 1s forwards ease-in;
+    margin: auto;
+    overflow: hidden;
+    width: 100%;
+        &:hover > .box{
+            width: 5em;
+            .check{
+                transform: rotate(0deg);
+            }
+        }
+        &--description{
+            flex-grow: 1;
+            width: 10em;
+        }
         &--name{
             margin: 11px 0 4px 11px;
             font-size: 18px;
             font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
         &--ingredient{
             margin: 4px 0 11px 11px;
             font-size: 15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
         &--price{
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             padding-right: 20px;
+            padding-left: 2px;
             padding-bottom: 11px;
             font-weight: 500;
         }
 }
+.box{
+    display: flex;
+    width: 0;
+    transition: all 1s;
+    background: variables.$colour-tertiary;
+}
 
+.check{
+    margin: auto;
+    border-radius: 50%;
+    color: white;
+    background: variables.$colour-tertiary;
+    transition: transform 1s;
+    transform: rotate(180deg);
+        &--circle{
+            font-size: 26px;
+        }
+}
 .button{
     display: flex;
     justify-content: center;
@@ -158,7 +229,7 @@
                 font-size: 16px;
                 border: 1px solid variables.$colour-primary;
                 border-radius: 30px;
-                background: linear-gradient(to bottom right,#d056f5, variables.$colour-primary );
+                background: linear-gradient(to bottom right, variables.$colour-secondary, variables.$colour-primary );
                 box-shadow: 1PX 3PX 10PX 3PX lightgray;
                 padding-left: 50px;
                 padding-right: 50px;
