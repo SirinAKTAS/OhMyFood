@@ -17,3 +17,13 @@ footer img{
 footer{
     background: #484a4a;
 }
+
+@media screen and (min-width: 992px){
+    footer{
+        text-align: center;
+    }
+    footer img{
+        height: 40px;
+        width: auto;
+    }
+}

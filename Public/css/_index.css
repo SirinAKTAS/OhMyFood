@@ -124,6 +124,51 @@ a {
   font-size: 18px;
 }
 
+@media screen and (min-width: 992px) {
+  .nav--logo {
+    height: 50px;
+    width: 20%;
+  }
+
+  .intro--search {
+    font-size: 26px;
+  }
+  .intro--search--name {
+    font-size: 26px;
+  }
+
+  .book--name {
+    font-size: 32px;
+  }
+
+  .book--description {
+    font-size: 26px;
+    width: 80%;
+  }
+
+  .steps {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .steps--article {
+    width: 33%;
+  }
+  .steps--article--name {
+    font-size: 24px;
+  }
+  .steps--number {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+
+  .size {
+    font-size: 24px;
+  }
+
+  .btn {
+    font-size: 24px;
+  }
+}
 @keyframes fadein {
   from {
     opacity: 0;
@@ -385,6 +430,16 @@ footer {
   background: #484a4a;
 }
 
+@media screen and (min-width: 992px) {
+  footer {
+    text-align: center;
+  }
+
+  footer img {
+    height: 40px;
+    width: auto;
+  }
+}
 .nav1 {
   display: flex;
   flex-direction: row;
