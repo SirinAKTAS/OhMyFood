@@ -1,6 +1,7 @@
+@use "../utils/mixins" as mixin;
+
 .nav1{
-    display: flex;
-    flex-direction: row;
+    @include mixin.flex_row;
     align-items: center;
     gap: 45px;
         &--arrow{

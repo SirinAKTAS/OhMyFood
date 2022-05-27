@@ -1,22 +1,21 @@
 @use "../Utils/variables" as variables;
+@use "../utils/mixins" as mixin;
 
 .nav{
-    display: flex;
-    flex-direction: row;
+    @include mixin.flex_row;
     align-items: center;
     justify-content: center;
         &--logo{
-            height: 30PX;
-            width: 50%;
+            height: auto;
+            max-width: 200px;
             margin-bottom: 16px;
             margin-top: 12px;
         }
 }
 .intro{
-    display: flex;
+    @include mixin.flex_column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     background: #F8F8F8;
         &--search{
             background: #E8E8E8;
@@ -26,6 +25,7 @@
             gap: 15px;
             height: 50px;
             width: 100%;
+            box-shadow: 0px -2px 4px 0px lightgrey;
                 &--name{
                     font-size: 18px;
                     font-weight: 500;
@@ -34,10 +34,9 @@
 }
 
 .book{
-    display: flex;
+    @include mixin.flex_column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     padding-bottom: 60px;  
         &--name{
             margin: 30px 0 6px 0;
@@ -66,17 +65,14 @@
 
 
 .function{
-    display: flex;
-    flex-direction: column; 
+    @include mixin.flex_column;
     padding: 30px 16px 50px 16px;
 }
 .steps{
-    display: flex;
-    flex-direction: column;
+    @include mixin.flex_column;
      &--article{
          margin: 12px;
-         display: flex;
-         flex-direction: row;
+         @include mixin.flex_row;
          align-items: center;
          justify-content: flex-start;
          gap: 20px;
@@ -84,6 +80,13 @@
          background: #F8F8F8;
          padding-top: 5px;
          padding-bottom: 5px;
+            &:hover{
+                .darkgray{
+                    color: variables.$colour-primary ;
+                }
+                background: #f7f5fb;
+                cursor: pointer;
+            }
             &--name{
                 font-size: 18px;
                 font-weight: 500;
@@ -111,20 +114,20 @@
 
 @media screen and (min-width: 992px){
     .nav--logo{
-        height: 50px;
-        width: 20%;
+        height: auto;
+        max-width: 200px;
     }
     .intro--search{
-        font-size: 26px;
+        font-size: 22px;
             &--name{
-                font-size: 26px;
+                font-size: 22px;
             }
     }
     .book--name{
-        font-size: 32px;
+        font-size: 28px;
     }
     .book--description{
-        font-size: 26px;
+        font-size: 22px;
         width: 80%;
     }
     .steps{
@@ -147,6 +150,29 @@
     .btn{
         font-size: 24px
     }
-
+    .container{
+        gap: 20px;
+    }
+    .row{
+        @include mixin.flex_row;
+        width: 100%;
+        gap: 20px;
+    }
 }
 
+@media screen and (min-width: 376px){
+    .steps{
+        flex-direction: row;
+        justify-content: space-evenly;
+            &--article{
+                width: 33%;
+                    &--name{
+                        font-size: 16px;
+                    }
+            }
+            &--number{
+                font-size: 12px;
+                padding: 6px 10px;
+            } 
+    }
+}

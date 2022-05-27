@@ -1,64 +1,33 @@
-@use "../Utils/variables" as variables;
-
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-
-@keyframes transition {
-    from {
-        transform: translateY(10px);
-    }
-    to {
-        transform: translateY(0px);
-    }
-}
-
-@keyframes heart {
-    0%   {
-        font-weight: 800;
-        background: -webkit-linear-gradient(variables.$colour-primary,variables.$colour-secondary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;   
-        opacity: 0.1;
-    }   
-    100% {
-        font-weight: 800;
-        background: -webkit-linear-gradient(variables.$colour-primary,variables.$colour-secondary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    } 
-}
+@use "../utils/variables" as variables;
+@use "../utils/mixins" as mixin;
 
 .vignets{
     animation: fadein 2s;
 }
 .restaurants{
-    display: flex;
-    flex-direction: column;
+    @include mixin.flex_column;
     background: #F8F8F8;
     padding-top: 20px;
     padding-bottom: 60px;
     padding: 30px 16px 60px 16px;      
 }
 .container{
-    display: flex;
-    flex-direction: column;
+    @include mixin.flex_column;
     align-items: center;
-    gap: 16px;
+}
+.row{
+    width: 100%;
 }
 .cards{
     display: flex;
     flex-wrap: wrap;
     background: white;
+    position: relative;
+    margin-bottom: 22px;
     width: 100%;
     height: 245px;
     border-radius: 16px;
-    box-shadow: 1PX 1PX 10PX 3PX lightgray;
+    @include mixin.box_shadow;
         &--img{
             object-fit: cover;
             width: 100%;
@@ -66,12 +35,13 @@
             border-radius: 16px 16px 0 0;
                 &--new{
                     display: flex;
-                    padding: 6px 8px;
+                    padding: 6px 12px;
                     position: absolute;
-                    right: 40px;
+                    right: 10px;
                     background: variables.$colour-tertiary;
-                    color: #2d9c80;
-                    border-radius: 4px;
+                    color: #006600;
+                    border-radius: 2px;
+                    font-size: 14px;
                 }
         }
 }
@@ -91,20 +61,15 @@
                 }
         }
 }
-.heart{
-    padding-right: 20px;
-    font-size: 32px;
+.heart--absolute{
+    position: absolute;
+    right: 20px;
+    font-size: 28px;
     font-weight: 100;
-        &--absolute{
-            position: absolute;
-            right: 36px;
-            font-size: 32px;
-            font-weight: 100;
-                &:hover{
-                    animation: heart 1500ms ease forwards;
-                    cursor: pointer;
-                }  
-        }
+        &:hover{
+            animation: heart 800ms ease forwards;
+            cursor: pointer;
+        }  
 }
 
 .restaurants a{
@@ -116,8 +81,7 @@
 /* menu */
 
 .menus{
-    display: flex;
-    flex-direction: column;
+    @include mixin.flex_column;
     background: #F8F8F8;
     padding-left: 16px;
     padding-right: 16px;
@@ -126,8 +90,7 @@
 }
 
 .tittle{
-    display: flex;
-    flex-direction: row;
+    @include mixin.flex_row;
     align-items: center;
     justify-content: space-between;
         &--name{
@@ -138,8 +101,7 @@
 }
 
 .articles{
-    display: flex;
-    flex-direction:column;
+    @include mixin.flex_column;
     gap: 16px;
     margin-bottom: 32px;
 }
@@ -155,12 +117,11 @@
 }
 
 .receipts{
-    display: flex;
-    flex-direction: row;
+    @include mixin.flex_row;
     justify-content: space-between;
     background: white;
     border-radius: 16px;
-    box-shadow: 1PX 3PX 10PX 3PX lightgray;
+    @include mixin.box_shadow;
     animation: transition 1s forwards ease-in;
     margin: auto;
     overflow: hidden;
@@ -191,8 +152,7 @@
             white-space: nowrap;
         }
         &--price{
-            display: flex;
-            flex-direction: column;
+            @include mixin.flex_column;
             justify-content: flex-end;
             padding-right: 20px;
             padding-left: 2px;
@@ -203,7 +163,7 @@
 .box{
     display: flex;
     width: 0;
-    transition: all 1s;
+    transition: all 0.5s;
     background: variables.$colour-tertiary;
 }
 
@@ -212,8 +172,8 @@
     border-radius: 50%;
     color: white;
     background: variables.$colour-tertiary;
-    transition: transform 1s;
-    transform: rotate(180deg);
+    transition: transform 0.5s;
+    transform: rotate(356deg);
         &--circle{
             font-size: 26px;
         }
@@ -233,5 +193,27 @@
                 box-shadow: 1PX 3PX 10PX 3PX lightgray;
                 padding-left: 50px;
                 padding-right: 50px;
+                    &:hover{
+                        cursor: pointer;
+                    }
         }
+}
+
+@media screen and (min-width: 992px){
+    .agencement{
+        display: flex;
+        gap: 26px;
+    }
+    .menus{
+        margin-top: -7%;
+    }
+    .receipts{
+        margin: 0;
+    }
+    .articles{
+        width: 50%;
+    }
+    #dessert--agencement{
+        margin-left: 25%;
+    }
 }
