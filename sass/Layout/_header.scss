@@ -4,6 +4,7 @@
     @include mixin.flex_row;
     align-items: center;
     gap: 45px;
+    height: 60px;
         &--arrow{
             padding-left: 30px;
             font-size: 24px;

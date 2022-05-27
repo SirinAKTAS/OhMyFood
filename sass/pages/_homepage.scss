@@ -5,11 +5,10 @@
     @include mixin.flex_row;
     align-items: center;
     justify-content: center;
+    height: 60px;
         &--logo{
             height: auto;
-            max-width: 200px;
-            margin-bottom: 16px;
-            margin-top: 12px;
+            max-width: 160px;
         }
 }
 .intro{
@@ -52,12 +51,14 @@
 }
 
 .btn{
+    display: flex;
+    justify-content: center;
     color: white;
-    padding: 16px;
+    padding: 16px 20px;
     font-size: 16px;
     border: 1px solid variables.$colour-primary;
     border-radius: 30px;
-    background: linear-gradient(to bottom right,#d056f5, variables.$colour-primary );
+    background: linear-gradient(to bottom right,#DA70D6, variables.$colour-primary );
     box-shadow: 1PX 3PX 10PX 3PX lightgray;
 }
 
@@ -75,7 +76,7 @@
          @include mixin.flex_row;
          align-items: center;
          justify-content: flex-start;
-         gap: 20px;
+         gap: 24px;
          border-radius: 20px;
          background: #F8F8F8;
          padding-top: 5px;
@@ -95,10 +96,15 @@
         &--number{
             background: variables.$colour-primary;
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border-radius: 50%;
-            padding: 4px 8px; 
-            font-size: 12px;
+            height: 24px;
+            width: 24px;
+            font-size: 14px;
             margin-left: -11px;
+            color: white;
         }
 }
 .white {
@@ -117,38 +123,15 @@
         height: auto;
         max-width: 200px;
     }
-    .intro--search{
-        font-size: 22px;
-            &--name{
-                font-size: 22px;
-            }
-    }
-    .book--name{
-        font-size: 28px;
-    }
-    .book--description{
-        font-size: 22px;
-        width: 80%;
-    }
     .steps{
         flex-direction: row;
         justify-content: space-evenly;
             &--article{
                 width: 33%;
-                    &--name{
-                        font-size: 24px;
-                    }
             }
             &--number{
                 font-size: 16px;
-                padding: 6px 10px;
             } 
-    }
-    .size{
-        font-size: 24px;
-    }
-    .btn{
-        font-size: 24px
     }
     .container{
         gap: 20px;
@@ -171,8 +154,7 @@
                     }
             }
             &--number{
-                font-size: 12px;
-                padding: 6px 10px;
+                padding-top: 3px;
             } 
     }
 }
