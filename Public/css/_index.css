@@ -40,12 +40,15 @@ a {
   justify-content: center;
   gap: 15px;
   height: 50px;
+  padding-left: 70px;
   width: 100%;
   box-shadow: 0px -2px 4px 0px lightgrey;
 }
 .intro--search--name {
   font-size: 18px;
   font-weight: 500;
+  border: none;
+  background: #E8E8E8;
 }
 
 .book {
@@ -173,9 +176,10 @@ a {
   }
   .steps--article {
     width: 33%;
+    gap: 10px;
   }
   .steps--article--name {
-    font-size: 16px;
+    font-size: 14px;
   }
   .steps--number {
     padding-top: 3px;
@@ -254,7 +258,7 @@ a {
 .heart--absolute {
   position: absolute;
   right: 20px;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 100;
 }
 .heart--absolute:hover {
@@ -384,7 +388,7 @@ a {
   color: white;
   padding: 16px;
   font-size: 16px;
-  border: 1px solid #9356DC;
+  border: none;
   border-radius: 30px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 1PX 3PX 10PX 3PX lightgray;
@@ -431,16 +435,16 @@ li {
   gap: 10px;
   padding: 3px;
   color: white;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 li i {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 footer img {
   height: auto;
-  max-width: 160px;
+  max-width: 130px;
   padding-left: 16px;
   margin-top: 20px;
   filter: invert(100%);

@@ -65,7 +65,7 @@
 .heart--absolute{
     position: absolute;
     right: 20px;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 100;
         &:hover{
             animation: heart 800ms ease forwards;
@@ -189,7 +189,7 @@
                 color: white;
                 padding: 16px;
                 font-size: 16px;
-                border: 1px solid variables.$colour-primary;
+                border: none;
                 border-radius: 30px;
                 background: linear-gradient(to bottom right, variables.$colour-secondary, variables.$colour-primary );
                 box-shadow: 1PX 3PX 10PX 3PX lightgray;
