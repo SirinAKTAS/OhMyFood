@@ -185,10 +185,6 @@ a {
     padding-top: 3px;
   }
 }
-.vignets {
-  animation: fadein 2s;
-}
-
 .restaurants {
   display: flex;
   flex-direction: column;
@@ -311,6 +307,10 @@ a {
   font-size: 18px;
 }
 
+.vignets {
+  animation: fadein 2s;
+}
+
 .receipts {
   display: flex;
   flex-direction: row;
@@ -325,7 +325,7 @@ a {
   cursor: pointer;
 }
 .receipts:hover > .box {
-  width: 5em;
+  width: 60px;
 }
 .receipts:hover > .box .check {
   transform: rotate(0deg);
@@ -375,7 +375,7 @@ a {
   transform: rotate(356deg);
 }
 .check--circle {
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .button {
@@ -510,14 +510,14 @@ footer {
 @keyframes heart {
   0% {
     font-weight: 800;
-    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    background: linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0.5;
   }
   100% {
     font-weight: 800;
-    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    background: linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

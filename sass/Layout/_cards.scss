@@ -1,9 +1,6 @@
 @use "../utils/variables" as variables;
 @use "../utils/mixins" as mixin;
 
-.vignets{
-    animation: fadein 2s;
-}
 .restaurants{
     @include mixin.flex_column;
     background: #F8F8F8;
@@ -116,7 +113,9 @@
             font-size: 18px;
         }
 }
-
+.vignets{
+    animation: fadein 2s;
+}
 .receipts{
     @include mixin.flex_row;
     justify-content: space-between;
@@ -129,7 +128,7 @@
     width: 100%;
     cursor: pointer;
         &:hover > .box{
-            width: 5em;
+            width: 60px;
             .check{
                 transform: rotate(0deg);
             }
@@ -177,7 +176,7 @@
     transition: transform 0.5s;
     transform: rotate(356deg);
         &--circle{
-            font-size: 26px;
+            font-size: 24px;
         }
 }
 .button{
