@@ -1,0 +1,526 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+.nav--logo {
+  height: auto;
+  max-width: 160px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #F8F8F8;
+}
+.intro--search {
+  background: #E8E8E8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  height: 50px;
+  padding-left: 70px;
+  width: 100%;
+  box-shadow: 0px -2px 4px 0px lightgrey;
+}
+.intro--search--name {
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  background: #E8E8E8;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+}
+.book--name {
+  margin: 30px 0 6px 0;
+  text-align: center;
+  font-size: 26px;
+  width: 80%;
+}
+.book--description {
+  text-align: center;
+  margin: 0 0 30PX 0;
+  font-size: 18px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 16px 20px;
+  font-size: 16px;
+  border: 1px solid #9356DC;
+  border-radius: 30px;
+  background: linear-gradient(to bottom right, #DA70D6, #9356DC);
+  box-shadow: 1PX 3PX 10PX 3PX lightgray;
+}
+
+.function {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 16px 50px 16px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+}
+.steps--article {
+  margin: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  border-radius: 20px;
+  background: #F8F8F8;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.steps--article:hover {
+  background: #f7f5fb;
+  cursor: pointer;
+}
+.steps--article:hover .darkgray {
+  color: #9356DC;
+}
+.steps--article--name {
+  font-size: 18px;
+  font-weight: 500;
+}
+.steps--number {
+  background: #9356DC;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  font-size: 14px;
+  margin-left: -11px;
+  color: white;
+}
+
+.white {
+  color: white;
+}
+
+.darkgray {
+  color: #808080;
+}
+
+.size {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 992px) {
+  .nav--logo {
+    height: auto;
+    max-width: 200px;
+  }
+
+  .steps {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .steps--article {
+    width: 33%;
+  }
+  .steps--number {
+    font-size: 16px;
+  }
+
+  .container {
+    gap: 20px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 376px) {
+  .steps {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .steps--article {
+    width: 33%;
+    gap: 10px;
+  }
+  .steps--article--name {
+    font-size: 14px;
+  }
+  .steps--number {
+    padding-top: 3px;
+  }
+}
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  background: #F8F8F8;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  padding: 30px 16px 60px 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  position: relative;
+  margin-bottom: 22px;
+  width: 100%;
+  height: 245px;
+  border-radius: 16px;
+  box-shadow: 1px 1px 10px 3px lightgray;
+}
+.cards--img {
+  object-fit: cover;
+  width: 100%;
+  height: 175px;
+  border-radius: 16px 16px 0 0;
+}
+.cards--img--new {
+  display: flex;
+  padding: 6px 12px;
+  position: absolute;
+  right: 10px;
+  background: #99E2D0;
+  color: #088b6b;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.description {
+  margin: 0;
+}
+.description--name {
+  margin: 10px 0 4px 10px;
+  font-size: 18px;
+}
+.description--name--info {
+  margin: 0 0 8px 10px;
+  font-size: 16px;
+}
+
+.heart--absolute {
+  position: absolute;
+  right: 20px;
+  font-size: 24px;
+  font-weight: 100;
+}
+.heart--absolute:hover {
+  animation: heart 800ms ease forwards;
+  cursor: pointer;
+}
+
+.restaurants a {
+  width: 100%;
+  height: 100%;
+}
+
+/* menu */
+.menus {
+  display: flex;
+  flex-direction: column;
+  background: #F8F8F8;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 42px 42px 0 0;
+  margin-top: -15%;
+}
+
+.tittle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.tittle--name {
+  font-weight: 500;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.menu {
+  height: 50px;
+  border-bottom: 3px solid #99E2D0;
+  width: 35px;
+}
+.menu--name {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.vignets {
+  animation: fadein 2s;
+}
+
+.receipts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 1px 1px 10px 3px lightgray;
+  animation: transition 1s forwards ease-in;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+}
+.receipts:hover > .box {
+  width: 60px;
+}
+.receipts:hover > .box .check {
+  transform: rotate(0deg);
+}
+.receipts--description {
+  flex-grow: 1;
+  width: 10em;
+}
+.receipts--name {
+  margin: 11px 0 4px 11px;
+  font-size: 18px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.receipts--ingredient {
+  margin: 4px 0 11px 11px;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.receipts--price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-right: 20px;
+  padding-left: 2px;
+  padding-bottom: 11px;
+  font-weight: 500;
+}
+
+.box {
+  display: flex;
+  width: 0;
+  transition: all 0.5s;
+  background: #99E2D0;
+}
+
+.check {
+  margin: auto;
+  border-radius: 50%;
+  color: white;
+  background: #99E2D0;
+  transition: transform 0.5s;
+  transform: rotate(356deg);
+}
+.check--circle {
+  font-size: 24px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  margin-top: 20px;
+}
+.button--buy {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 1PX 3PX 10PX 3PX lightgray;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.button--buy:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  .agencement {
+    display: flex;
+    gap: 26px;
+  }
+
+  .menus {
+    margin-top: -7%;
+  }
+
+  .receipts {
+    margin: 0;
+  }
+
+  .articles {
+    width: 50%;
+  }
+
+  #dessert--agencement {
+    margin-left: 25%;
+  }
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-left: 16px;
+  gap: 4px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 3px;
+  color: white;
+  font-size: 14px;
+}
+
+li i {
+  font-size: 12px;
+}
+
+footer img {
+  height: auto;
+  max-width: 130px;
+  padding-left: 16px;
+  margin-top: 20px;
+  filter: invert(100%);
+}
+
+footer {
+  background: #484a4a;
+}
+
+@media screen and (min-width: 992px) {
+  footer {
+    text-align: center;
+  }
+
+  footer img {
+    height: auto;
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 376px) {
+  footer {
+    text-align: center;
+  }
+
+  ul {
+    align-items: center;
+  }
+}
+.nav1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 45px;
+  height: 60px;
+}
+.nav1--arrow {
+  padding-left: 30px;
+  font-size: 24px;
+}
+
+.backimg {
+  object-fit: cover;
+  width: 100%;
+  height: 340px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes transition {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes heart {
+  0% {
+    font-weight: 800;
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.1;
+  }
+  100% {
+    font-weight: 800;
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/*# sourceMappingURL=_index.css.map */

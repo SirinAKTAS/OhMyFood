@@ -1,0 +1,220 @@
+@use "../utils/variables" as variables;
+@use "../utils/mixins" as mixin;
+
+.restaurants{
+    @include mixin.flex_column;
+    background: #F8F8F8;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    padding: 30px 16px 60px 16px;      
+}
+.container{
+    @include mixin.flex_column;
+    align-items: center;
+}
+.row{
+    width: 100%;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    position: relative;
+    margin-bottom: 22px;
+    width: 100%;
+    height: 245px;
+    border-radius: 16px;
+    @include mixin.box_shadow;
+        &--img{
+            object-fit: cover;
+            width: 100%;
+            height: 175px;
+            border-radius: 16px 16px 0 0;
+                &--new{
+                    display: flex;
+                    padding: 6px 12px;
+                    position: absolute;
+                    right: 10px;
+                    background: variables.$colour-tertiary;
+                    color: #088b6bff;
+                    border-radius: 2px;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+        }
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.description{
+    margin: 0;
+        &--name{
+            margin: 10px 0 4px 10px;
+            font-size: 18px;
+                &--info{
+                    margin: 0 0 8px 10px;
+                    font-size: 16px;
+                }
+        }
+}
+.heart--absolute{
+    position: absolute;
+    right: 20px;
+    font-size: 24px;
+    font-weight: 100;
+        &:hover{
+            animation: heart 800ms ease forwards;
+            cursor: pointer;
+        }  
+}
+
+.restaurants a{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* menu */
+
+.menus{
+    @include mixin.flex_column;
+    background: #F8F8F8;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 42px 42px 0 0;
+    margin-top: -15%;
+}
+
+.tittle{
+    @include mixin.flex_row;
+    align-items: center;
+    justify-content: space-between;
+        &--name{
+            font-weight: 500;
+            font-family: 'Shrikhand', sans-serif;
+            font-size: 28px;
+        }
+}
+
+.articles{
+    @include mixin.flex_column;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.menu{
+    height: 50px;
+    border-bottom: 3px solid variables.$colour-tertiary;
+    width: 35px;    
+        &--name{
+            font-weight: 400;
+            font-size: 18px;
+        }
+}
+.vignets{
+    animation: fadein 2s;
+}
+.receipts{
+    @include mixin.flex_row;
+    justify-content: space-between;
+    background: white;
+    border-radius: 16px;
+    @include mixin.box_shadow;
+    animation: transition 1s forwards ease-in;
+    margin: auto;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+        &:hover > .box{
+            width: 60px;
+            .check{
+                transform: rotate(0deg);
+            }
+        }
+        &--description{
+            flex-grow: 1;
+            width: 10em;
+        }
+        &--name{
+            margin: 11px 0 4px 11px;
+            font-size: 18px;
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        &--ingredient{
+            margin: 4px 0 11px 11px;
+            font-size: 15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        &--price{
+            @include mixin.flex_column;
+            justify-content: flex-end;
+            padding-right: 20px;
+            padding-left: 2px;
+            padding-bottom: 11px;
+            font-weight: 500;
+        }
+}
+.box{
+    display: flex;
+    width: 0;
+    transition: all 0.5s;
+    background: variables.$colour-tertiary;
+}
+
+.check{
+    margin: auto;
+    border-radius: 50%;
+    color: white;
+    background: variables.$colour-tertiary;
+    transition: transform 0.5s;
+    transform: rotate(356deg);
+        &--circle{
+            font-size: 24px;
+        }
+}
+.button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    margin-top: 20px;
+        &--buy{
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                border-radius: 30px;
+                background: linear-gradient(to bottom right, variables.$colour-secondary, variables.$colour-primary );
+                box-shadow: 1PX 3PX 10PX 3PX lightgray;
+                padding-left: 50px;
+                padding-right: 50px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+        }
+}
+
+@media screen and (min-width: 992px){
+    .agencement{
+        display: flex;
+        gap: 26px;
+    }
+    .menus{
+        margin-top: -7%;
+    }
+    .receipts{
+        margin: 0;
+    }
+    .articles{
+        width: 50%;
+    }
+    #dessert--agencement{
+        margin-left: 25%;
+    }
+}
