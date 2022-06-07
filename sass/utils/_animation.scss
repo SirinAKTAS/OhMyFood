@@ -33,3 +33,20 @@
         -webkit-text-fill-color: transparent;
     } 
 }
+
+@keyframes loading {
+    to{
+        transform: rotate(2turn);
+    }
+}
+@keyframes fadeout {
+    0%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
